@@ -39,7 +39,7 @@ Regras importantes:
 ## Instalação
 
 ```bash
-git clone <URL-do-repositório>
+git clone https://github.com/gabrielsrochadev/indicadores-ve/
 cd indicadores-ve
 python -m pip install -r requirements.txt
 ```
