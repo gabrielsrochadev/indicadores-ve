@@ -61,7 +61,7 @@ Nomes no código seguem o padrão Python (`snake_case`): `classificarRisco()` �
 | Relacionamento no diagrama | Tipo | Como ficou no código |
 |---|---|---|
 | `Modulo` ◆— `Indicador` (1 → *) | **Composição** | O `Modulo` cria os indicadores (`modulo.adicionar_indicador(...)`) e os guarda numa lista interna. O indicador não existe sem o módulo: remover o módulo remove os indicadores. |
-| `Perfil` — `Permissao` (* → *) | **Agregação** | O perfil guarda referências a permissões que existem independentemente e podem ser compartilhadas por vários perfis. |
+| `Perfil` — `Permissao` (* → *) | **Agregação** (associação simples no diagrama aprovado – ver A11) | O perfil guarda referências a permissões que existem independentemente e podem ser compartilhadas por vários perfis. |
 | `Usuario` → `Perfil` (* → 1) | Associação | Atributo `usuario.perfil`. |
 | `Indicador` — `LancamentoMensal` (1 → *) | Associação | Atributo `lancamento.indicador` (ver A02). |
 | `Modulo` — `CicloPNCD` / `LevantamentoLIRAa` (1 → *) | Associação | Atributo `modulo` = módulo Endemias. |
@@ -69,7 +69,7 @@ Nomes no código seguem o padrão Python (`snake_case`): `classificarRisco()` �
 | `Importacao` origina `LancamentoMensal` (0..1 → *) | Associação | Atributo `lancamento.importacao_id` (vazio quando digitado). |
 | `Usuario` homologa `RelatorioQuadrimestral` (1 → *) | Associação | Atributo `homologado_por`. |
 | `Usuario` gera `LogAuditoria` (1 → *) | Associação | Atributo `usuario` no log. |
-| `RelatorioQuadrimestral` ⇢ `LancamentoMensal` | Dependência | O relatório recebe os lançamentos no método `consolidar(lancamentos)` e não os guarda. |
+| `RelatorioQuadrimestral` ⇢ `LancamentoMensal` | Dependência (sem multiplicidades – ver A11) | O relatório recebe os lançamentos no método `consolidar(lancamentos)` e não os guarda. |
 | *(nova)* `RegistroEpidemiologico` ◁— 3 subclasses | **Herança** | Ver A01. |
 
 A generalização de atores do diagrama de casos de uso (*Coordenador herda de Gestor*) foi
@@ -111,9 +111,9 @@ como dados (`Perfil`/`Permissao`) e não como subclasses de `Usuario`.
 
 | Nº | Artefato afetado | Alteração | Justificativa técnica |
 |---|---|---|---|
-| **A01** | Diagrama de Classes | Criada a classe abstrata `RegistroEpidemiologico`, superclasse de `LancamentoMensal`, `CicloPNCD` e `LevantamentoLIRAa`. | As três classes têm a mesma responsabilidade (registrar um dado de um período, se validar e gerar um indicador). A superclasse elimina código repetido e permite tratar os três de forma polimórfica. Também resolve a inconsistência entre a RN05 (inteiros) e os índices decimais do LIRAa: cada subclasse valida o seu tipo de dado. |
+| **A01** | Diagrama de Classes | Criada a classe abstrata `RegistroEpidemiologico`, superclasse de `LancamentoMensal`, `CicloPNCD` e `LevantamentoLIRAa`. Consequências: `id`, `ano` e `criadoEm` passam para a superclasse; a associação `Usuario registra` passa a apontar para a superclasse (vale para os três tipos); `validar()` passa a receber a data de referência (`validar(hoje)`); novos métodos `resultado()`, `chave()` e `mes_referencia`. | As três classes têm a mesma responsabilidade (registrar um dado de um período, se validar e gerar um indicador). A superclasse elimina código repetido e permite tratar os três de forma polimórfica. Também resolve a inconsistência entre a RN05 (inteiros) e os índices decimais do LIRAa: cada subclasse valida o seu tipo de dado. |
 | **A02** | Diagrama de Classes | A associação `Indicador 1 — * LancamentoMensal` passa a ser direta. `Permissao` se relaciona apenas com `Perfil`. | Correção de erro de traçado: no diagrama, a linha de `Indicador` termina em `Permissao`, sugerindo uma relação `Permissao — LancamentoMensal` que não tem sentido no domínio nem nos requisitos. |
-| **A03** | Diagrama de Classes | Definidos os valores dos enums: `TipoValor` (INTEIRO, DECIMAL), `Periodicidade` (MENSAL, BIMESTRAL, QUADRIMESTRAL), `OrigemDado` (DIGITACAO, IMPORTACAO), `StatusRelatorio` (RASCUNHO, HOMOLOGADO, REABERTO), `StatusImportacao` (PENDENTE, CONFIRMADA, CANCELADA). | O diagrama usava os tipos sem definir seus valores. |
+| **A03** | Diagrama de Classes | Definidos os valores dos enums: `TipoValor` (INTEIRO, DECIMAL), `Periodicidade` (MENSAL, BIMESTRAL, QUADRIMESTRAL), `OrigemDado` (DIGITACAO, IMPORTACAO), `StatusRelatorio` (RASCUNHO, HOMOLOGADO, REABERTO), `StatusImportacao` (PENDENTE, CONFIRMADA, CANCELADA). O atributo `Importacao.status`, que no diagrama era `string`, passa a usar `StatusImportacao`. | O diagrama usava os tipos sem definir seus valores. Usar um enum também em `Importacao.status` impede situações inválidas, como fazem os outros atributos de situação. |
 | **A04** | SRS seção 5 e 10 (banco relacional) | Persistência em arquivo JSON. | Conteúdo trabalhado na disciplina. A camada `persistence/` usa a interface abstrata `Repositorio`, então trocar JSON por banco relacional no futuro não altera as regras de negócio. |
 | **A05** | SRS seção 5 e 10 (web, API REST) | Interface em menu no terminal. RNF02 (responsividade), RNF04 (disponibilidade), RNF07 (navegadores) e RNF09 (HTTPS) ficam fora desta versão. | A TED avalia POO, persistência e testes. As regras de negócio ficam nos `services/`, independentes da interface, prontas para uma futura camada web. |
 | **A06** | RF08 (PDF e Excel) | Exportação em **CSV** (abre no Excel) e em **relatório de texto (.txt)**, com cabeçalho da SMS, período, data/hora de emissão e situação. | Gerar PDF e XLSX exige bibliotecas externas. Os formatos escolhidos usam só a biblioteca padrão e mantêm o conteúdo exigido pelo CA de RF08. |
@@ -121,6 +121,7 @@ como dados (`Perfil`/`Permissao`) e não como subclasses de `Usuario`.
 | **A08** | RN05 | A regra "inteiros ≥ 0" vale para indicadores do tipo INTEIRO. Índices do LIRAa (IIP e IB) são decimais ≥ 0. | Os índices do LIRAa são decimais (ex.: 0,2) e a RN05, como escrita, os rejeitaria. |
 | **A09** | RF04 / carga inicial | Na carga inicial, os dados do SIM/SINASC entram como total do quadrimestre, lançado no último mês (agosto). | O relatório oficial só traz os totais do quadrimestre, sem divisão mensal. O lançamento mensal continua disponível para os próximos meses. |
 | **A10** | RNF11 (backup) | Backup implementado como cópia datada do arquivo JSON a cada gravação, mantendo as cópias dos últimos 30 dias. | Adaptação do backup do banco de dados à persistência em arquivo. |
+| **A11** | Diagrama de Classes | O relacionamento `Perfil * — * Permissao`, que no diagrama aprovado é uma associação simples, passa a ser **agregação** (`Perfil ◇— Permissao`). A dependência `RelatorioQuadrimestral ⇢ LancamentoMensal` ("consolida") fica sem multiplicidades. | A permissão existe independentemente do perfil e é compartilhada por vários perfis (o mesmo objeto `ver_painel` está no Digitador, no Gestor e no Coordenador); remover um perfil não remove suas permissões. Essa é a semântica de agregação (parte compartilhada, ciclo de vida independente), que a associação simples não expressa. Na dependência, o relatório não guarda os lançamentos, apenas os recebe no método `consolidar()`, por isso não cabem multiplicidades. |
 
 Atributos e métodos que aparecem no código sem estar escritos no diagrama são consequência
 direta dos relacionamentos (ex.: `lancamento.indicador`, `relatorio.homologado_por`) ou
@@ -164,7 +165,7 @@ As três divergências são evidência prática da RN06 (totais nunca são digit
 
 ---
 
-## 7. Diagrama de Classes revisado (com A01–A03)
+## 7. Diagrama de Classes revisado (com A01–A03 e A11)
 
 ![Diagrama de Classes revisado](img/diagrama_classes.png)
 

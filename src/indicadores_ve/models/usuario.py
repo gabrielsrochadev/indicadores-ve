@@ -1,7 +1,8 @@
 """Classes Usuario, Perfil e Permissao (Diagrama de Classes – TED 03).
 
 - Usuario → Perfil: associação (cada usuário tem um perfil).
-- Perfil ◇— Permissao: AGREGAÇÃO. As permissões existem por conta própria e
+- Perfil ◇— Permissao: AGREGAÇÃO (alteração A11; no diagrama aprovado era
+  associação simples). As permissões existem por conta própria e
   podem ser compartilhadas por vários perfis (o Coordenador tem as mesmas
   permissões do Gestor e mais a de homologar).
 

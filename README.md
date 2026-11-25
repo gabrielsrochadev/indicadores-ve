@@ -135,7 +135,7 @@ indicadores-ve/
 | **Polimorfismo** | `resultado()` devolve 418, 98,57 ou "satisfatório" conforme a subclasse; `ServicoLancamentos.registrar()` aceita qualquer um dos três registros |
 | **Encapsulamento** | `@property` com validação nos setters (ex.: valor negativo é recusado); senha só como hash em atributo privado |
 | **Métodos especiais** | `__eq__`/`__hash__` (Usuario, registros, Permissao), `__len__` (Importacao, Modulo), `__contains__` (Modulo, Perfil), `__str__`/`__repr__` |
-| **Relacionamentos** | Composição Modulo ◆ Indicador; agregação Perfil ◇ Permissao; associações e dependência conforme o diagrama |
+| **Relacionamentos** | Composição Modulo ◆ Indicador; agregação Perfil ◇ Permissao (alteração A11: no diagrama aprovado era associação simples); demais associações e dependência conforme o diagrama |
 
 ![Diagrama de Classes revisado](docs/img/diagrama_classes.png)
 
@@ -151,8 +151,8 @@ indicadores-ve/
 O arquivo [`docs/mapeamento_e_alteracoes.md`](docs/mapeamento_e_alteracoes.md) traz:
 
 - o mapeamento de cada classe e relacionamento do diagrama da TED 03 para o código;
-- as **10 alterações justificadas** (A01–A10) em relação à especificação aprovada. Exemplos: a
-  herança `RegistroEpidemiologico`, a persistência em JSON, a interface em terminal e a exportação em CSV/TXT;
+- as **11 alterações justificadas** (A01–A11) em relação à especificação aprovada. Exemplos: a
+  herança `RegistroEpidemiologico`, a agregação Perfil ◇ Permissao, a persistência em JSON, a interface em terminal e a exportação em CSV/TXT;
 - a tabela **requisito → código → teste** para todos os RF, RN e RNF;
 - observações sobre os dados: na carga, o sistema encontrou três erros de soma no relatório
   oficial (SINAN 2.054 × 2.372; LACEN 2.815 × 2.818; pacientes do laboratório 1.790 × 1.490).

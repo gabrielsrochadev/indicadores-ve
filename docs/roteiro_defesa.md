@@ -18,10 +18,10 @@ Mostrar `docs/img/diagrama_classes.png` ao lado do código:
 |---|---|
 | Classe abstrata `RegistroEpidemiologico` e 3 subclasses | `src/indicadores_ve/models/registros.py` |
 | Composição Modulo ◆ Indicador | `Modulo.adicionar_indicador()` cria o indicador; `indicador.modulo` não pode ser trocado |
-| Agregação Perfil ◇ Permissao | `services/usuarios.py` → `criar_perfis_padrao()` usa as **mesmas** permissões em vários perfis |
+| Perfil — Permissao: associação no aprovado, **agregação** na revisão (A11) | `services/usuarios.py` → `criar_perfis_padrao()` usa as **mesmas** permissões em vários perfis |
 | `-senhaHash` (privado) | `self.__senha_hash` em `models/usuario.py` |
 
-Explicar que as diferenças estão registradas e justificadas: `docs/mapeamento_e_alteracoes.md`, seção 5 (A01–A10).
+Explicar que as diferenças estão registradas e justificadas: `docs/mapeamento_e_alteracoes.md`, seção 5 (A01–A11).
 
 ## 3. Pilares da POO (3 min)
 
@@ -88,6 +88,10 @@ dentro do módulo e não pode trocar de módulo. No JSON, ele é gravado dentro 
 **E a diferença entre composição e agregação?**
 Na agregação (Perfil ◇ Permissao), a permissão existe sozinha e é compartilhada: o mesmo objeto
 `ver_painel` está nos perfis Digitador, Gestor e Coordenador. Na composição, o indicador só existe dentro do módulo.
+
+**Mas no diagrama aprovado Perfil e Permissao eram uma associação simples, não?**
+Sim. Durante a implementação percebemos que a relação tem a semântica de agregação (parte
+compartilhada, com vida própria) e registramos a mudança, com justificativa, como A11.
 
 **Por que JSON e não banco de dados?**
 Foi o conteúdo trabalhado na disciplina (A04). Como os serviços só conhecem a classe abstrata
