@@ -1,0 +1,65 @@
+classDiagram
+    direction TB
+    class Repositorio {
+        <<abstract>>
+        +carregar()*
+        +salvar()*
+        +salvar_registro(registro)
+        +obter_registro(chave)
+        +remover_registro(chave)
+        +obter_usuario(login)
+    }
+    class RepositorioMemoria {
+        +carregar()
+        +salvar()
+    }
+    class RepositorioJSON {
+        +caminho: Path
+        +carregar()
+        +salvar()
+        +fazer_backup()
+    }
+    Repositorio <|-- RepositorioMemoria
+    Repositorio <|-- RepositorioJSON
+
+    class Exportador {
+        <<abstract>>
+        +extensao: str
+        +gerar(conteudo)* str
+    }
+    class ExportadorCSV {
+        +gerar(conteudo) str
+    }
+    class ExportadorTXT {
+        +gerar(conteudo) str
+    }
+    Exportador <|-- ExportadorCSV
+    Exportador <|-- ExportadorTXT
+
+    class Sistema {
+        +autenticacao
+        +usuarios
+        +lancamentos
+        +importacao
+        +indicadores
+        +relatorios
+        +auditoria
+    }
+    class ServicoRelatorios {
+        +homologar(usuario, ano, quad)
+        +reabrir(usuario, ano, quad, justificativa)
+        +exportar(usuario, ano, quad, formato)
+    }
+    class ServicoLancamentos {
+        +registrar(usuario, RegistroEpidemiologico)
+        +verificar_periodo_aberto(registro)
+    }
+    Sistema *-- ServicoLancamentos
+    Sistema *-- ServicoRelatorios
+    Sistema --> Repositorio : usa
+    ServicoRelatorios ..> Exportador : usa
+    class Aplicacao {
+        +executar()
+        +menu_principal()
+    }
+    Aplicacao --> Sistema : chama

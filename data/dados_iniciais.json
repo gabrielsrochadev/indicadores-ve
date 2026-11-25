@@ -1,0 +1,1435 @@
+{
+  "_fonte": "Relatório – Vigilância Epidemiológica: 2º quadrimestre (maio a agosto) – 2025/2026. SMS Balsas-MA. Apenas totais agregados, sem dados de pacientes (RN01).",
+  "_observacoes": [
+    "SIM/SINASC: o relatório só traz o total do quadrimestre; lançado no último mês (agosto) – alteração A09.",
+    "SINAN e LACEN de 2025: o relatório só traz o total geral (2.138 e 1.674), sem divisão por agravo/exame; por isso não há carga de 2025 para esses módulos.",
+    "PNCD: o relatório chama os dois ciclos de 'Ciclo 01'; aqui foram numerados 3 (mai/jun) e 4 (ago/set) para não violar a RN04. O ciclo 4 termina em setembro, por isso pertence ao 3º quadrimestre (RN10)."
+  ],
+  "usuarios": [
+    {
+      "nome": "Administrador do Sistema",
+      "login": "admin",
+      "perfil": "Administrador",
+      "senha": "admin2026"
+    },
+    {
+      "nome": "Coordenador da VE (demonstração)",
+      "login": "coordenador",
+      "perfil": "Coordenador",
+      "senha": "coord2026"
+    },
+    {
+      "nome": "Gestor de Saúde (demonstração)",
+      "login": "gestor",
+      "perfil": "Gestor",
+      "senha": "gestor2026"
+    },
+    {
+      "nome": "Técnico Digitador (demonstração)",
+      "login": "digitador",
+      "perfil": "Digitador",
+      "senha": "digit2026"
+    }
+  ],
+  "modulos": [
+    {
+      "sigla": "SINAN",
+      "nome": "Sistema de Informação de Agravos de Notificação",
+      "indicadores": [
+        {
+          "codigo": "SIFILIS_CONGENITA",
+          "nome": "Sífilis congênita",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "SIFILIS_ADULTO",
+          "nome": "Sífilis em adulto",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "SIFILIS_GESTANTE",
+          "nome": "Sífilis em gestante",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "SIFILIS_NE",
+          "nome": "Sífilis não especificada",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "CORRIMENTO_URETRAL",
+          "nome": "Síndrome do corrimento uretral em homem",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "ANIMAIS_PECONHENTOS",
+          "nome": "Acidente por animais peçonhentos",
+          "grupo": "Acidentes e violências"
+        },
+        {
+          "codigo": "ANTIRRABICA",
+          "nome": "Atendimento antirrábico",
+          "grupo": "Zoonoses"
+        },
+        {
+          "codigo": "ACIDENTE_TRABALHO",
+          "nome": "Acidente de trabalho grave",
+          "grupo": "Acidentes e violências"
+        },
+        {
+          "codigo": "MATERIAL_BIOLOGICO",
+          "nome": "Acidente com material biológico",
+          "grupo": "Acidentes e violências"
+        },
+        {
+          "codigo": "AIDS",
+          "nome": "Aids",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "GESTANTE_HIV",
+          "nome": "Gestante HIV",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "CRIANCA_EXPOSTA_HIV",
+          "nome": "Criança exposta ao HIV",
+          "grupo": "IST/HIV/Aids"
+        },
+        {
+          "codigo": "EXANTEMATICAS",
+          "nome": "Doenças exantemáticas",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "HEPATITES_VIRAIS",
+          "nome": "Hepatites virais",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "HANSENIASE",
+          "nome": "Hanseníase",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "INTOXICACAO_EXOGENA",
+          "nome": "Intoxicação exógena",
+          "grupo": "Acidentes e violências"
+        },
+        {
+          "codigo": "TUBERCULOSE",
+          "nome": "Tuberculose",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "LEISH_TEGUMENTAR",
+          "nome": "Leishmaniose tegumentar",
+          "grupo": "Zoonoses"
+        },
+        {
+          "codigo": "LEISH_VISCERAL",
+          "nome": "Leishmaniose visceral",
+          "grupo": "Zoonoses"
+        },
+        {
+          "codigo": "MENINGITE",
+          "nome": "Meningite",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "VIOLENCIA_INTERPESSOAL",
+          "nome": "Violência interpessoal",
+          "grupo": "Acidentes e violências"
+        },
+        {
+          "codigo": "TOXO_GESTACIONAL",
+          "nome": "Toxoplasmose gestacional",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "CHAGAS_AGUDA",
+          "nome": "Doença de Chagas aguda",
+          "grupo": "Zoonoses"
+        },
+        {
+          "codigo": "LEPTOSPIROSE",
+          "nome": "Leptospirose",
+          "grupo": "Zoonoses"
+        },
+        {
+          "codigo": "TOXOPLASMOSE",
+          "nome": "Toxoplasmose",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "TOXO_CONGENITA",
+          "nome": "Toxoplasmose congênita",
+          "grupo": "Doenças transmissíveis"
+        },
+        {
+          "codigo": "ZIKA",
+          "nome": "Zika",
+          "grupo": "Arboviroses"
+        },
+        {
+          "codigo": "CHIKUNGUNYA",
+          "nome": "Chikungunya",
+          "grupo": "Arboviroses"
+        },
+        {
+          "codigo": "DENGUE",
+          "nome": "Dengue",
+          "grupo": "Arboviroses"
+        }
+      ]
+    },
+    {
+      "sigla": "LACEN",
+      "nome": "Laboratório Central de Saúde Pública e laboratório da VE",
+      "indicadores": [
+        {
+          "codigo": "LAC_ADENOVIRUS_BM",
+          "nome": "Adenovírus – biologia molecular",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_CHAGAS_SORO",
+          "nome": "Chagas – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_CHIK_SORO",
+          "nome": "Chikungunya – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_CMV_AVIDEZ",
+          "nome": "Citomegalovírus – avidez IgG",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_CMV_SORO",
+          "nome": "Citomegalovírus – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_CRIPTOCOCOS",
+          "nome": "Criptococos – LF CrAg",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_CULTURA_FUNGOS",
+          "nome": "Cultura – fungos",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_DENGUE_NS1",
+          "nome": "Dengue – detecção do antígeno NS1",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_DENGUE_SORO",
+          "nome": "Dengue – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_EPSTEIN_BARR",
+          "nome": "Epstein Barr – biologia molecular (externo)",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HIV_IMMUNOBLOT",
+          "nome": "HIV – confirmatório Immunoblot",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HIV_SORO",
+          "nome": "HIV – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HTLV_SORO",
+          "nome": "HTLV I e II – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HTLV_WB",
+          "nome": "HTLV I e II – Western Blot",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HANSEN_BACILOSC",
+          "nome": "Hanseníase – baciloscopia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPA_SORO",
+          "nome": "Hepatite A – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPB_CV_BM",
+          "nome": "Hepatite B – carga viral (biologia molecular)",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPB_SORO",
+          "nome": "Hepatite B – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPB_TRM_CV",
+          "nome": "Hepatite B – TRM carga viral rápida",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPC_CV_BM",
+          "nome": "Hepatite C – carga viral (biologia molecular)",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPC_SORO",
+          "nome": "Hepatite C – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPC_TRM_CV",
+          "nome": "Hepatite C – TRM carga viral rápida",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HEPD_SORO",
+          "nome": "Hepatite D – sorologia (externo)",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HERPES_SORO",
+          "nome": "Herpes vírus – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_HISTOPLASMOSE",
+          "nome": "Histoplasmose – sorologia (externo)",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_INFLUENZA_BM",
+          "nome": "Influenza – biologia molecular",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_LV_TR",
+          "nome": "Leishmaniose visceral humana – teste rápido",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_ARBOVIRUS",
+          "nome": "Pesquisa de arbovírus – Zika/Dengue/Chikungunya",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_IST_MULTI_BM",
+          "nome": "Pesquisa de multipatógenos IST – biologia molecular",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_ROTAVIRUS_SORO",
+          "nome": "Rotavírus – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_RUBEOLA_SORO",
+          "nome": "Rubéola – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TOXO_AVIDEZ_IGG",
+          "nome": "Toxoplasmose – avidez IgG",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TOXO_AVIDEZ_IGM",
+          "nome": "Toxoplasmose – avidez IgM",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TOXO_SORO",
+          "nome": "Toxoplasmose – sorologia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TB_BACILOSC",
+          "nome": "Tuberculose – baciloscopia",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TB_IGRA",
+          "nome": "Tuberculose – IGRA",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TB_LFLAM",
+          "nome": "Tuberculose – LF LAM",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TB_TRM",
+          "nome": "Tuberculose – TRM",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAC_TB_EXTRAPULM_TRM",
+          "nome": "Tuberculose extrapulmonar – TRM",
+          "grupo": "Exames LACEN"
+        },
+        {
+          "codigo": "LAB_PACIENTES",
+          "nome": "Pacientes atendidos no laboratório da VE",
+          "grupo": "Laboratório da VE"
+        },
+        {
+          "codigo": "LAB_CARGA_VIRAL_HIV",
+          "nome": "Carga viral HIV",
+          "grupo": "Laboratório da VE"
+        },
+        {
+          "codigo": "LAB_PPD",
+          "nome": "PPD (teste tuberculínico)",
+          "grupo": "Laboratório da VE"
+        },
+        {
+          "codigo": "LAB_TR_DENGUE",
+          "nome": "Teste rápido de dengue",
+          "grupo": "Laboratório da VE"
+        },
+        {
+          "codigo": "LAB_TR_COVID",
+          "nome": "Teste rápido de COVID",
+          "grupo": "Laboratório da VE"
+        }
+      ]
+    },
+    {
+      "sigla": "SIM_SINASC",
+      "nome": "Sistemas de Informações sobre Mortalidade e sobre Nascidos Vivos",
+      "indicadores": [
+        {
+          "codigo": "OBITOS_MIF",
+          "nome": "Óbitos de mulher em idade fértil (MIF)",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "OBITOS_FETAIS",
+          "nome": "Óbitos fetais",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "OBITOS_NEONATAIS_PRECOCES",
+          "nome": "Óbitos neonatais precoces (0 a 6 dias)",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "OBITOS_NEONATAIS_TARDIOS",
+          "nome": "Óbitos neonatais tardios (7 a 27 dias)",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "OBITOS_POS_NEONATAIS",
+          "nome": "Óbitos pós-neonatais (28 a 364 dias)",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "OBITOS_1_A_4",
+          "nome": "Óbitos de crianças de 1 a 4 anos",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "NASCIDOS_VIVOS",
+          "nome": "Nascidos vivos",
+          "grupo": "Nascimentos",
+          "periodicidade": "quadrimestral"
+        },
+        {
+          "codigo": "OBITOS_TOTAL",
+          "nome": "Total de óbitos",
+          "grupo": "Mortalidade",
+          "periodicidade": "quadrimestral"
+        }
+      ]
+    },
+    {
+      "sigla": "ENDEMIAS",
+      "nome": "Controle de Endemias (LIRAa e PNCD)",
+      "indicadores": []
+    }
+  ],
+  "lancamentos": [
+    {
+      "modulo": "SINAN",
+      "codigo": "SIFILIS_CONGENITA",
+      "ano": 2026,
+      "meses": {
+        "5": 6,
+        "6": 2,
+        "7": 2,
+        "8": 6
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "SIFILIS_ADULTO",
+      "ano": 2026,
+      "meses": {
+        "5": 29,
+        "6": 28,
+        "7": 24,
+        "8": 18
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "SIFILIS_GESTANTE",
+      "ano": 2026,
+      "meses": {
+        "5": 15,
+        "6": 11,
+        "7": 7,
+        "8": 8
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "SIFILIS_NE",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 2,
+        "7": 1,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "CORRIMENTO_URETRAL",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "ANIMAIS_PECONHENTOS",
+      "ano": 2026,
+      "meses": {
+        "5": 37,
+        "6": 36,
+        "7": 32,
+        "8": 29
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "ANTIRRABICA",
+      "ano": 2026,
+      "meses": {
+        "5": 67,
+        "6": 56,
+        "7": 83,
+        "8": 32
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "ACIDENTE_TRABALHO",
+      "ano": 2026,
+      "meses": {
+        "5": 23,
+        "6": 26,
+        "7": 21,
+        "8": 2
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "MATERIAL_BIOLOGICO",
+      "ano": 2026,
+      "meses": {
+        "5": 5,
+        "6": 6,
+        "7": 4,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "AIDS",
+      "ano": 2026,
+      "meses": {
+        "5": 4,
+        "6": 14,
+        "7": 11,
+        "8": 6
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "GESTANTE_HIV",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 0,
+        "7": 1,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "CRIANCA_EXPOSTA_HIV",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "EXANTEMATICAS",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "HEPATITES_VIRAIS",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "HANSENIASE",
+      "ano": 2026,
+      "meses": {
+        "5": 8,
+        "6": 3,
+        "7": 1,
+        "8": 2
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "INTOXICACAO_EXOGENA",
+      "ano": 2026,
+      "meses": {
+        "5": 23,
+        "6": 17,
+        "7": 18,
+        "8": 13
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "TUBERCULOSE",
+      "ano": 2026,
+      "meses": {
+        "5": 2,
+        "6": 5,
+        "7": 9,
+        "8": 7
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "LEISH_TEGUMENTAR",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 2,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "LEISH_VISCERAL",
+      "ano": 2026,
+      "meses": {
+        "5": 3,
+        "6": 3,
+        "7": 2,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "MENINGITE",
+      "ano": 2026,
+      "meses": {
+        "5": 2,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "VIOLENCIA_INTERPESSOAL",
+      "ano": 2026,
+      "meses": {
+        "5": 13,
+        "6": 18,
+        "7": 29,
+        "8": 8
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "TOXO_GESTACIONAL",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "CHAGAS_AGUDA",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "LEPTOSPIROSE",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "TOXOPLASMOSE",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "TOXO_CONGENITA",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "ZIKA",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "CHIKUNGUNYA",
+      "ano": 2026,
+      "meses": {
+        "5": 5,
+        "6": 5,
+        "7": 4,
+        "8": 3
+      }
+    },
+    {
+      "modulo": "SINAN",
+      "codigo": "DENGUE",
+      "ano": 2026,
+      "meses": {
+        "5": 418,
+        "6": 380,
+        "7": 237,
+        "8": 156
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_ADENOVIRUS_BM",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 3
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_CHAGAS_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 34,
+        "6": 43,
+        "7": 24,
+        "8": 28
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_CHIK_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 2,
+        "6": 2,
+        "7": 3,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_CMV_AVIDEZ",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_CMV_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 33,
+        "6": 46,
+        "7": 29,
+        "8": 26
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_CRIPTOCOCOS",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 9,
+        "7": 9,
+        "8": 20
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_CULTURA_FUNGOS",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_DENGUE_NS1",
+      "ano": 2026,
+      "meses": {
+        "5": 207,
+        "6": 87,
+        "7": 19,
+        "8": 19
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_DENGUE_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 56,
+        "6": 20,
+        "7": 9,
+        "8": 8
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_EPSTEIN_BARR",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 1,
+        "7": 2,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HIV_IMMUNOBLOT",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HIV_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HTLV_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 35,
+        "6": 44,
+        "7": 26,
+        "8": 26
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HTLV_WB",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 2,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HANSEN_BACILOSC",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 6
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPA_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 35,
+        "6": 44,
+        "7": 23,
+        "8": 22
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPB_CV_BM",
+      "ano": 2026,
+      "meses": {
+        "5": 10,
+        "6": 4,
+        "7": 5,
+        "8": 2
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPB_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 44,
+        "6": 46,
+        "7": 30,
+        "8": 31
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPB_TRM_CV",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 9,
+        "7": 12,
+        "8": 9
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPC_CV_BM",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPC_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 1,
+        "7": 3,
+        "8": 12
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPC_TRM_CV",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 1,
+        "7": 0,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HEPD_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 3,
+        "6": 0,
+        "7": 3,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HERPES_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 1,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_HISTOPLASMOSE",
+      "ano": 2026,
+      "meses": {
+        "5": 3,
+        "6": 1,
+        "7": 2,
+        "8": 4
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_INFLUENZA_BM",
+      "ano": 2026,
+      "meses": {
+        "5": 252,
+        "6": 97,
+        "7": 19,
+        "8": 23
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_LV_TR",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 1,
+        "7": 3,
+        "8": 2
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_ARBOVIRUS",
+      "ano": 2026,
+      "meses": {
+        "5": 678,
+        "6": 237,
+        "7": 42,
+        "8": 11
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_IST_MULTI_BM",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 2,
+        "7": 1,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_ROTAVIRUS_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 1,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_RUBEOLA_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 3,
+        "6": 4,
+        "7": 4,
+        "8": 3
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TOXO_AVIDEZ_IGG",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TOXO_AVIDEZ_IGM",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TOXO_SORO",
+      "ano": 2026,
+      "meses": {
+        "5": 1,
+        "6": 4,
+        "7": 4,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TB_BACILOSC",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 2
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TB_IGRA",
+      "ano": 2026,
+      "meses": {
+        "5": 41,
+        "6": 39,
+        "7": 20,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TB_LFLAM",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 4,
+        "7": 11,
+        "8": 19
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TB_TRM",
+      "ano": 2026,
+      "meses": {
+        "5": 6,
+        "6": 8,
+        "7": 8,
+        "8": 12
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAC_TB_EXTRAPULM_TRM",
+      "ano": 2026,
+      "meses": {
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAB_PACIENTES",
+      "ano": 2026,
+      "meses": {
+        "5": 712,
+        "6": 444,
+        "7": 317,
+        "8": 317
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAB_CARGA_VIRAL_HIV",
+      "ano": 2026,
+      "meses": {
+        "5": 34,
+        "6": 73,
+        "7": 69,
+        "8": 78
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAB_PPD",
+      "ano": 2026,
+      "meses": {
+        "5": 46,
+        "6": 25,
+        "7": 34,
+        "8": 36
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAB_TR_DENGUE",
+      "ano": 2026,
+      "meses": {
+        "5": 290,
+        "6": 78,
+        "7": 17,
+        "8": 18
+      }
+    },
+    {
+      "modulo": "LACEN",
+      "codigo": "LAB_TR_COVID",
+      "ano": 2026,
+      "meses": {
+        "5": 7,
+        "6": 2,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_MIF",
+      "ano": 2025,
+      "meses": {
+        "8": 17
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_MIF",
+      "ano": 2026,
+      "meses": {
+        "8": 14
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_FETAIS",
+      "ano": 2025,
+      "meses": {
+        "8": 6
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_FETAIS",
+      "ano": 2026,
+      "meses": {
+        "8": 11
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_NEONATAIS_PRECOCES",
+      "ano": 2025,
+      "meses": {
+        "8": 3
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_NEONATAIS_PRECOCES",
+      "ano": 2026,
+      "meses": {
+        "8": 5
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_NEONATAIS_TARDIOS",
+      "ano": 2025,
+      "meses": {
+        "8": 2
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_NEONATAIS_TARDIOS",
+      "ano": 2026,
+      "meses": {
+        "8": 0
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_POS_NEONATAIS",
+      "ano": 2025,
+      "meses": {
+        "8": 1
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_POS_NEONATAIS",
+      "ano": 2026,
+      "meses": {
+        "8": 3
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_1_A_4",
+      "ano": 2025,
+      "meses": {
+        "8": 2
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_1_A_4",
+      "ano": 2026,
+      "meses": {
+        "8": 2
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "NASCIDOS_VIVOS",
+      "ano": 2025,
+      "meses": {
+        "8": 598
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "NASCIDOS_VIVOS",
+      "ano": 2026,
+      "meses": {
+        "8": 557
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_TOTAL",
+      "ano": 2025,
+      "meses": {
+        "8": 220
+      }
+    },
+    {
+      "modulo": "SIM_SINASC",
+      "codigo": "OBITOS_TOTAL",
+      "ano": 2026,
+      "meses": {
+        "8": 176
+      }
+    }
+  ],
+  "ciclos_pncd": [
+    {
+      "ano": 2026,
+      "numero": 3,
+      "mes_inicial": 5,
+      "imoveis_programados": 40680,
+      "imoveis_trabalhados": 40100
+    },
+    {
+      "ano": 2026,
+      "numero": 4,
+      "mes_inicial": 8,
+      "imoveis_programados": 40680,
+      "imoveis_trabalhados": 40157
+    }
+  ],
+  "levantamentos_liraa": [
+    {
+      "data_inicio": "2026-06-29",
+      "data_fim": "2026-07-04",
+      "indice_predial": 0.2,
+      "indice_breteau": 0.2,
+      "pontos_estrategicos": 171
+    }
+  ],
+  "totais_informados_no_relatorio": {
+    "SINAN_2026_Q2": 2372,
+    "LACEN_2026_Q2": 2818,
+    "LAB_PACIENTES_2026_Q2": 1490
+  }
+}

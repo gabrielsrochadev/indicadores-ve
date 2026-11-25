@@ -1,0 +1,118 @@
+classDiagram
+    direction LR
+
+    class RegistroEpidemiologico {
+        <<abstract>>
+        +id: int
+        +ano: int
+        +criadoEm: datetime
+        +registradoPor: Usuario
+        +validar(hoje)* bool
+        +resultado()* object
+        +chave()* tuple
+    }
+    class LancamentoMensal {
+        +mes: int
+        +valor: decimal
+        +origem: OrigemDado
+        +validar(hoje) bool
+        +resultado() decimal
+    }
+    class CicloPNCD {
+        +numero: int
+        +mesInicial: int
+        +mesFinal: int
+        +imoveisProgramados: int
+        +imoveisTrabalhados: int
+        +cobertura() decimal
+        +validar(hoje) bool
+        +resultado() decimal
+    }
+    class LevantamentoLIRAa {
+        +dataInicio: date
+        +dataFim: date
+        +indicePredial: decimal
+        +indiceBreteau: decimal
+        +pontosEstrategicos: int
+        +classificarRisco() string
+        +validar(hoje) bool
+        +resultado() string
+    }
+    RegistroEpidemiologico <|-- LancamentoMensal
+    RegistroEpidemiologico <|-- CicloPNCD
+    RegistroEpidemiologico <|-- LevantamentoLIRAa
+
+    class Modulo {
+        +id: int
+        +sigla: string
+        +nome: string
+    }
+    class Indicador {
+        +id: int
+        +codigo: string
+        +nome: string
+        +grupo: string
+        +tipoValor: TipoValor
+        +periodicidade: Periodicidade
+        +ativo: bool
+    }
+    Modulo "1" *-- "*" Indicador
+    Modulo "1" -- "*" CicloPNCD : Endemias
+    Modulo "1" -- "*" LevantamentoLIRAa : Endemias
+    Indicador "1" -- "*" LancamentoMensal
+
+    class Usuario {
+        +id: int
+        +nome: string
+        +login: string
+        -senhaHash: string
+        +ativo: bool
+        +ultimoAcesso: datetime
+        +autenticar(senha) bool
+    }
+    class Perfil {
+        +id: int
+        +nome: string
+        +descricao: string
+    }
+    class Permissao {
+        +codigo: string
+        +descricao: string
+    }
+    Usuario "*" --> "1" Perfil
+    Perfil "*" o-- "*" Permissao
+    Usuario "1" --> "*" RegistroEpidemiologico : registra
+
+    class Importacao {
+        +id: int
+        +nomeArquivo: string
+        +dataHora: datetime
+        +linhasValidas: int
+        +linhasRejeitadas: int
+        +status: StatusImportacao
+    }
+    Importacao "0..1" --> "*" LancamentoMensal : origina
+
+    class RelatorioQuadrimestral {
+        +id: int
+        +ano: int
+        +quadrimestre: int
+        +status: StatusRelatorio
+        +versao: int
+        +destaques: text
+        +homologadoEm: datetime
+        +homologar(usuario)
+        +reabrir(usuario, justificativa)
+    }
+    Usuario "1" --> "*" RelatorioQuadrimestral : homologa
+    RelatorioQuadrimestral ..> LancamentoMensal : consolida
+
+    class LogAuditoria {
+        +id: int
+        +dataHora: datetime
+        +acao: string
+        +entidade: string
+        +valorAnterior: string
+        +valorNovo: string
+    }
+    Usuario "1" --> "*" LogAuditoria : gera

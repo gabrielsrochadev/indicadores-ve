@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Banco gerado em tempo de execução (recriado por scripts/seed.py)
+data/banco.json
+data/backups/
+exportacoes/
+.coverage
+htmlcov/
+data/banco.tmp
